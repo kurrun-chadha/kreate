@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <title>SPARK MOTION</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="main-navig">
+            <ul class="main-navig-list">
+                <li><a href="index.html" class="main-navig-link">HOME</a></li>
+                <li><a href="about.html" class="main-navig-link">ABOUT</a></li>
+                <li><a href="packages.html" class="main-navig-link">PACKAGES</a></li>
+                <li><a href="portfolio.html" class="main-navig-link">PORTFOLIO</a></li>
+                <li><a href="connect.html" class="main-navig-link navig-cta">CONNECT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-cta">
+            <div class="heading-text-box">
+                <h1 class="primary-heading">CONNECT</h1>
+            </div>
+            <div class="cta">
+                <div class="contact">
+                    <div class="cta-text-box">
+                        <form class="cta-form" action="mailto:kreateofcl@hotmail.com" method="POST" enctype="text/plain">
+                            <div>
+                                <label for="full-name">FULL NAME</label>
+                                <input id="full-name" type="text" placeholder="JOHN DOE" name="Full Name" required>
+                            </div>
+                            <div>
+                                <label for="email">EMAIL</label>
+                                <input id="email" type="email" placeholder="JOHNDOE@EMAIL.COM" name="Email" required>
+                            </div>
+                            <div>
+                            <label>PACKAGE</label>
+                                <select id="select" name="Package" required>
+                                    <option value="">PLEASE CHOOSE</option>
+                                    <option value="Spark">SPARK</option>
+                                    <option value="Flare">FLARE</option>
+                                    <option value="Ignite">IGNITE</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="information">COMMENTS</label>
+                                <textarea id="information" placeholder="PLEASE DESCRIBE WHAT YOU ARE LOOKING FOR" name="Comments" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-form">CONNECT</button>
+                        </form>
+                    </div>
+                    <div class="cta-img-box" role="img" aria-label="Image required for the form"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="section-footer">
+            <div class="footer">
+                <ul class="footer-information">
+                    <li><a href="#" class="platform-link" target="_blank">WELCOME TO KREATE &nbsp;&nbsp;&#9724;&nbsp;&nbsp; SPARK MOTION TODAY &nbsp;&nbsp;&#9724;&nbsp;&nbsp; KREATE IS IN DEVELOPMENT FOR MOBILES AND TABLETS</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+<script src="script.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cd87449f3b.js" crossorigin="anonymous"></script>
+</body>
+</html>
