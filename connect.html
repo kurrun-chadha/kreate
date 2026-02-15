@@ -30,18 +30,18 @@
             <div class="cta">
                 <div class="contact">
                     <div class="cta-text-box">
-                        <form class="cta-form" action="mailto:kreateofcl@hotmail.com" method="POST" enctype="text/plain">
+                        <div class="cta-form">
                             <div>
                                 <label for="full-name">FULL NAME</label>
-                                <input id="full-name" type="text" placeholder="JOHN DOE" name="Full Name" required>
+                                <input id="full-name" type="text" placeholder="JOHN DOE" name="Full Name" onkeyup="sendForm()" required>
                             </div>
                             <div>
                                 <label for="email">EMAIL</label>
-                                <input id="email" type="email" placeholder="JOHNDOE@EMAIL.COM" name="Email" required>
+                                <input id="email" type="email" placeholder="JOHNDOE@EMAIL.COM" name="Email" onkeyup="sendForm()" required>
                             </div>
                             <div>
                             <label>PACKAGE</label>
-                                <select id="select" name="Package" required>
+                                <select id="select" name="Package" onkeyup="sendForm()" required>
                                     <option value="">PLEASE CHOOSE</option>
                                     <option value="Spark">SPARK</option>
                                     <option value="Flare">FLARE</option>
@@ -50,10 +50,10 @@
                             </div>
                             <div>
                                 <label for="information">COMMENTS</label>
-                                <textarea id="information" placeholder="PLEASE DESCRIBE WHAT YOU ARE LOOKING FOR" name="Comments" required></textarea>
+                                <textarea id="information" placeholder="PLEASE DESCRIBE WHAT YOU ARE LOOKING FOR" name="Comments" onkeyup="sendForm()" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-form">CONNECT</button>
-                        </form>
+                            <a href="" id="connect"><button type="submit" class="btn btn-form" href="">CONNECT</button></a>
+                        </div>
                     </div>
                     <div class="cta-img-box" role="img" aria-label="Image required for the form"></div>
                 </div>
@@ -67,6 +67,20 @@
             </div>
         </footer>
     </main>
+<script>
+    function sendForm() {
+        var link = document.getElementById("connect");
+        let name = document.getElementById("full-name").value;
+        let package = document.getElementById("select").value;
+        let information = document.getElementById("information").value;
+        var subject = "SPARK MOTION"
+        var message = "Name: " + name + "%0D%0A" + "Package: " + package + "%0D%0A" + "Comments: " + information;
+        var email = "kreateofcl@hotmail.com"
+        var href = "mailto:" + email + "?subject=" + subject + "&body=" + message;
+        console.log(href);
+        link.setAttribute("href", href);
+    }
+</script>
 <script src="https://kit.fontawesome.com/cd87449f3b.js" crossorigin="anonymous"></script>
 </body>
 </html>

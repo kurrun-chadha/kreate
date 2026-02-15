@@ -547,6 +547,10 @@ body {
     font-size: 1.5rem;
 }
 
+.package-conditions {
+    padding: 3rem;
+}
+
 .fa-fire-flame-simple, .fa-fire-flame-curved, .fa-fire {
     font-size: 3.5rem;
 }
