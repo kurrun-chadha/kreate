@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    <title>SPARK MOTION</title>
+    <!-- <link rel="icon" type="image/x-icon" href="imgs/favicon.ico"> -->
+    <title>.</title>
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <nav class="main-navig">
             <ul class="main-navig-list">
                 <li><a href="index.html" class="main-navig-link">HOME</a></li>
@@ -21,18 +21,22 @@
                 <li><a href="connect.html" class="main-navig-link navig-cta">CONNECT</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
     <main>
-        <section class="section-index">
+        <section class="section-countdown">
+            <h1 class="countdown-heading">OFFICIAL LAUNCH</h1>
+            <p id="countdown"></p>
+        </section>
+        <!-- <section class="section-index">
             <div class="index">
                 <div class="index-text-box">
                     <p class="index-text">WELCOME TO</p>
                     <h1 class="index-heading">KREATE</h1>
-                    <p class="index-text index-text-lower">OFFICIAL LAUNCH</p>
-                    <a href="about.html"><button class="btn btn-index">LEARN MORE</button></a>
+                    <p class="index-text index-text-lower">LAUNCH SOON</p>
+                    <a href="about.html" class="btn btn-index">LEARN MORE</a>
                 </div>
                 <div class="index-img-box">
-                    <img src="imgs/index-img-2.png" class="index-img" alt="Image of the official logo">
+                    <img src="imgs/index-img-v2.png" class="index-img" alt="Image of the official logo">
                 </div>
             </div>
         </section>
@@ -42,8 +46,29 @@
                     <li><a href="#" class="platform-link">INTRODUCING KREATE &nbsp;&nbsp;◉&nbsp;&nbsp; OFFICIAL LAUNCH</a></li>
                 </ul>
             </div>
-        </footer>
+        </footer> -->
     </main>
+<script>
+var countDownDate = new Date("Feb 26, 2026 16:00:00").getTime();
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 <script src="https://kit.fontawesome.com/cd87449f3b.js" crossorigin="anonymous"></script>
 </body>
 </html>
